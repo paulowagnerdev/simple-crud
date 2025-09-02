@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+    <title>CRUD</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label>Nome: </label>
+            <input type="text" id="input-name" placeholder="Informe o Nome" required>
+        </div>
+        <div>
+            <label>Gênero: </label>
+            <select name="gender" id="select-gender">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+        </div>
+        <div>
+            <label>Data de Nascimento: </label>
+            <input type="date" id="birth-date" required>
+        </div>
+        <button id="submitBtn">Incluir</button>
+    </form>
+    <table id="table-id">
+        <thead>
+            <td>Nome</td>
+            <td>Gênero</td>
+            <td>Data de Nacimento</td>
+            <td>Idade</td>
+        </thead>
+        <tbody id="tbody">
+            <tr class="newTr">
+                <td id="person-name">${person.name}</td>
+                <td id="person-gender">${person.gender}</td>
+                <td id="person-birthdate">${person.date}</td>
+                <td id="person-age">${person.age}</td>
+                 <td id="td-div">
+                    <div>
+                        <button id="edit">Editar</button>
+                        <button id="insert">Excluir</button>
+                    </div>
+                </td>
+
+                <td class="hide">
+                    <input type="text" class="edit-input" id="input-name-edited">
+                </td>
+                <td class="hide">
+                    <select name="gender" class="edit-input" id="select-gender" >
+                        <option selected value="">--Gênero</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                </td>
+                <td class="hide">
+                        <input type="date" class="edit-input" id="input-birth-date-edited">
+                </td>
+                <td class="hide">37</td>
+                <td class="hide" id="td-div-save">
+                    <div>
+                        <button id="edit-btn">Salvar</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
