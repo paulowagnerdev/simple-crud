@@ -37,6 +37,7 @@
         </thead>
         <tbody id="tbody">
             <tr class="newTr">
+
                 <td id="person-name">${person.name}</td>
                 <td id="person-gender">${person.gender}</td>
                 <td id="person-birthdate">${person.date}</td>
@@ -44,7 +45,7 @@
                  <td id="td-div">
                     <div>
                         <button id="edit">Editar</button>
-                        <button id="insert">Excluir</button>
+                        <button id="delete-btn">Excluir</button>
                     </div>
                 </td>
 
@@ -61,7 +62,7 @@
                 <td class="hide">
                         <input type="date" class="edit-input" id="input-birth-date-edited">
                 </td>
-                <td class="hide">37</td>
+                <td class="hide" id="edit-person-age">${person.age}</td>
                 <td class="hide" id="td-div-save">
                     <div>
                         <button id="edit-btn">Salvar</button>
